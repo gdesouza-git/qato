@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <title>Cadastrar ONG</title>
+  </head>
+  <body>
+      <form action="{{ url_for('ongadicionada')}}" method="post">
+          <h2>Informe os dados da ONG</h2>
+          <div>
+              <input type="text" name="nome" placeholder="Nome">
+          </div>
+          <div>
+              <input type="text" name="descricao" placeholder="Descrição">
+          </div>
+
+             <div>
+              <input type="number" name="cnpj" placeholder="CNPJ (Opcional)">
+          </div>
+
+          <div>
+
+              <select name="tipo" id="tipo" >
+                  <option value="" disabled selected>Tipo da ONG</option>
+                  <option value="Fundação">Fundação</option>
+                  <option value="Associação">Associação</option>
+                  <option value="Organização da Sociedade Civil com Interesse Público">Organização da Sociedade Civil com Interesse Público</option>
+                  <option value="Organização Social">Organização Social</option>
+                  <option value="Entidade Beneficente de Assistência Social">Entidade Beneficente de Assistência Social</option>
+                  <option value="Negócio Social">Negócio Social</option>
+              </select>
+          </div>
+
+           <div>
+              <input type="number" name="telefone" placeholder="Telefone (Opcional)">
+          </div>
+
+            <div>
+              <input type="email" name="email" placeholder="E-mail (Opcional)">
+          </div>
+
+
+          <div>
+              <button >Enviar</button>
+          </div>
+      </form>
+  </body>
+
+</html>
